@@ -3,15 +3,17 @@
 // create loadCategories
 const loadCategories = () =>{
     // fetch the data
-    fetch('https://openapi.programming-hero.com/api/phero-tube/categories')
+    fetch("https://openapi.programming-hero.com/api/phero-tube/categories")
     .then((res) => res.json())
-    .then((data) => console.log(data.categories))
+    .then((data) => displayCategories(data.categories))
     .catch((error) => console.log(error));
 }
 
 
 // create displayCategories
 const displayCategories = (categories) =>{
+    const categoriesContainer=document.getElementById("categories");
+
     categories.forEach((item) => {
         console.log(item);
         // create a button
@@ -19,6 +21,9 @@ const displayCategories = (categories) =>{
         const button=document.createElement("button");
         button.classList="btn";
         button.innerText=item.categories;
+        
+        // add button to category container
+        categoriesContainer.append(button);
     });
 };
 
