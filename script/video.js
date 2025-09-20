@@ -18,6 +18,27 @@ const loadVideos = () =>{
     .catch((error) => console.log(error));
 }
 
+
+const cardDemo={
+    "category_id": "1001",
+    "video_id": "aaab",
+    "thumbnail": "https://i.ibb.co/QPNzYVy/moonlight.jpg",
+    "title": "Midnight Serenade",
+    "authors": [
+        {
+            "profile_picture": "https://i.ibb.co/fDbPv7h/Noha.jpg",
+            "profile_name": "Noah Walker",
+            "verified": false
+        }
+    ],
+    "others": {
+        "views": "543K",
+        "posted_date": ""
+    },
+    "description": "'Midnight Serenade' by Noah Walker is a soulful journey into the depths of the night, capturing the mystique and allure of a moonlit evening. With 543K views, this song brings together tender melodies and evocative lyrics, making it a favorite among listeners seeking a contemplative yet uplifting experience. Immerse yourself in this musical masterpiece and feel the calm embrace of the night."
+}
+
+
 const displayVideos = (videos) =>{
     const videoContainer=document.getElementById("videos");
     videos.forEach((video) => {
@@ -27,7 +48,7 @@ const displayVideos = (videos) =>{
         card.innerHTML=`
         <figure>
             <img
-            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+            src=${video.thumbnail}
             alt="Shoes" />
         </figure>
         <div class="card-body">
