@@ -19,24 +19,24 @@ const loadVideos = () =>{
 }
 
 
-const cardDemo={
-    "category_id": "1001",
-    "video_id": "aaab",
-    "thumbnail": "https://i.ibb.co/QPNzYVy/moonlight.jpg",
-    "title": "Midnight Serenade",
-    "authors": [
-        {
-            "profile_picture": "https://i.ibb.co/fDbPv7h/Noha.jpg",
-            "profile_name": "Noah Walker",
-            "verified": false
-        }
-    ],
-    "others": {
-        "views": "543K",
-        "posted_date": ""
-    },
-    "description": "'Midnight Serenade' by Noah Walker is a soulful journey into the depths of the night, capturing the mystique and allure of a moonlit evening. With 543K views, this song brings together tender melodies and evocative lyrics, making it a favorite among listeners seeking a contemplative yet uplifting experience. Immerse yourself in this musical masterpiece and feel the calm embrace of the night."
-}
+// const cardDemo={
+//     "category_id": "1001",
+//     "video_id": "aaab",
+//     "thumbnail": "https://i.ibb.co/QPNzYVy/moonlight.jpg",
+//     "title": "Midnight Serenade",
+//     "authors": [
+//         {
+//             "profile_picture": "https://i.ibb.co/fDbPv7h/Noha.jpg",
+//             "profile_name": "Noah Walker",
+//             "verified": false
+//         }
+//     ],
+//     "others": {
+//         "views": "543K",
+//         "posted_date": ""
+//     },
+//     "description": "'Midnight Serenade' by Noah Walker is a soulful journey into the depths of the night, capturing the mystique and allure of a moonlit evening. With 543K views, this song brings together tender melodies and evocative lyrics, making it a favorite among listeners seeking a contemplative yet uplifting experience. Immerse yourself in this musical masterpiece and feel the calm embrace of the night."
+// }
 
 
 const displayVideos = (videos) =>{
@@ -46,17 +46,17 @@ const displayVideos = (videos) =>{
         const card=document.createElement("div");
         card.classList="card";
         card.innerHTML=`
-        <figure>
+        <figure class="h-[200px]">
             <img
             src=${video.thumbnail}
-            alt="Shoes" />
+            alt="Shoes" class="h-full w-full object-cover" />
         </figure>
-        <div class="card-body">
-            <h2 class="card-title">Card Title</h2>
-            <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-            <div class="card-actions justify-end">
-            <button class="btn btn-primary">Buy Now</button>
+        <div class="px-0 py-2 flex gap-2">
+            <div>
+                <img class="w-10 h-10 rounded-full object-cover" src=${video.authors[0].profile_picture} />
             </div>
+            <h2></h2>
+            <p></p>
         </div>
         `;
         videoContainer.append(card);
