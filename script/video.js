@@ -87,6 +87,6 @@ const displayCategories = (categories) =>{
     });
 };
 
-// function
+// functions
 loadCategories();
 loadVideos();
