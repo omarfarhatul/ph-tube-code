@@ -6,3 +6,4 @@ const isVerified="";
 // else{
 //     console.log("User is not verified.");
 // }
+console.log(`${isVerified===true? "User is verified" : "User is not verified"}`);
