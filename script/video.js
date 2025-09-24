@@ -18,6 +18,10 @@ const loadCategories = () =>{
     .catch((error) => console.log(error));
 };
 
+const loadCategoryVideos= (id) => {
+    alert(id);
+}
+
 // create loadVideos
 const loadVideos = () =>{
     // fetch the data
@@ -95,12 +99,18 @@ const displayCategories = (categories) =>{
         console.log(item);
         // create a button
 
-        const button=document.createElement("button");
-        button.classList="btn";
-        button.innerText=item.categories;
+        const buttonContainer=document.createElement("div");
+        buttonContainer.innerHTML=`
+        <button onclick="loadCategoryVideos()" class="btn">
+        ${item.category}
+        </button>
+        `
+
+        // button.classList="btn";
+        // button.innerText=item.categories;
         
         // add button to category container
-        categoriesContainer.append(button);
+        categoriesContainer.append(buttonContainer);
     });
 };
 
