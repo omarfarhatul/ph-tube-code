@@ -19,7 +19,12 @@ const loadCategories = () =>{
 };
 
 const loadCategoryVideos= (id) => {
-    alert(id);
+    // alert(id);
+    // fetch
+    fetch(`https://openapi.programming-hero.com/api/phero-tube/category/${id}`)
+    .then((res) => res.json())
+    .then((data) => displayCategories(data.categories))
+    .catch((error) => console.log(error));
 }
 
 // create loadVideos
@@ -101,7 +106,7 @@ const displayCategories = (categories) =>{
 
         const buttonContainer=document.createElement("div");
         buttonContainer.innerHTML=`
-        <button onclick="loadCategoryVideos()" class="btn">
+        <button onclick="loadCategoryVideos(${item.category_id})" class="btn">
         ${item.category}
         </button>
         `
