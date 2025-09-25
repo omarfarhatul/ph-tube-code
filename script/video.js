@@ -7,6 +7,14 @@ function getTimeString(time){
     return `${hour} hour ${minute} minute ${remainingSecond} second ago`;
 }
 
+const removeActiveClass=() => {
+    const buttons=document.getElementsByClassName("category-btn");
+    console.log(buttons);
+    for(let btn of buttons){
+        btn.classList.remove("active");
+    }
+}
+
 // 1. fetch, load and show categories on html
 
 // create loadCategories
@@ -24,6 +32,10 @@ const loadCategoryVideos= (id) => {
     fetch(`https://openapi.programming-hero.com/api/phero-tube/category/${id}`)
     .then((res) => res.json())
     .then((data) => {
+        // all button active class remove
+        removeActiveClass();
+
+        // id class active start
         const activeBtn=document.getElementById(`btn-${id}`);
         activeBtn.classList.add("active");
         displayVideos(data.category)
