@@ -66,7 +66,7 @@ const displayVideos = (videos) =>{
         videoContainer.classList.remove("grid");
         videoContainer.innerHTML=`
         <div class="min-h-[300px] w-full flex flex-col gap-5 justify-center items-center">
-            <img scr="./img/Icon.png" />
+            <img src="./img/Icon.png" alt="">
             <h2 class="text-center text-xl font-bold">No Content Here in this Category</h2>
         </div>
         `;
