@@ -51,7 +51,17 @@ const loadVideos = () =>{
     .then((data) => displayVideos(data.videos))
     .catch((error) => console.log(error));
 }
+const  loadDetails= async (videoId) =>{
+    console.log(videoId);
+    const uri=`https://openapi.programming-hero.com/api/phero-tube/videos/${videoId}`;
+    const res= await fetch(uri);
+    const data=await res.json();
+    displayDetails(data.video);
+};
 
+const displayDetails = (video) => {
+    console.log(video);
+};
 
 // const cardDemo={
 //     "category_id": "1001",
@@ -119,6 +129,7 @@ const displayVideos = (videos) =>{
                 ${video.authors[0].verified===true? `<img class="w-5" src="https://img.icons8.com/?size=96&id=D9RtvkuOe31p&format=png">`: ""}
 
                 </div>
+                <p><button onclick="loadDetails('${video.video_id})" class="btn btn-sm btn-error">Details</button></p>
             </div>
         </div>
         `;
