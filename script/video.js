@@ -61,6 +61,9 @@ const  loadDetails= async (videoId) =>{
 
 const displayDetails = (video) => {
     console.log(video);
+    const detailContainer=document.getElementById("modal-content");
+
+    // way-1
 };
 
 // const cardDemo={
