@@ -106,7 +106,7 @@ const displayVideos = (videos) =>{
     }
 
     videos.forEach((video) => {
-        console.log(video);
+        // console.log(video);
         const card=document.createElement("div");
         card.classList="card";
         card.innerHTML=`
