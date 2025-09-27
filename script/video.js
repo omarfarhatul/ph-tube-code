@@ -64,7 +64,10 @@ const displayDetails = (video) => {
     const detailContainer=document.getElementById("modal-content");
 
     // way-1
-    document.getElementById("showModalData").click();
+    // document.getElementById("showModalData").click();
+
+    // way-2
+    document.getElementById("customModal").showModal();
 };
 
 // const cardDemo={
