@@ -63,6 +63,10 @@ const displayDetails = (video) => {
     console.log(video);
     const detailContainer=document.getElementById("modal-content");
 
+    detailContainer.innerHTML= `
+        <p>It's a our video descriptions....</p>
+    `;
+
     // way-1
     // document.getElementById("showModalData").click();
 
