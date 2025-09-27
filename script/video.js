@@ -133,7 +133,7 @@ const displayVideos = (videos) =>{
                 ${video.authors[0].verified===true? `<img class="w-5" src="https://img.icons8.com/?size=96&id=D9RtvkuOe31p&format=png">`: ""}
 
                 </div>
-                <p><button onclick="loadDetails('${video.video_id})" class="btn btn-sm btn-error">Details</button></p>
+                <p><button onclick="loadDetails('${video.video_id}')" class="btn btn-sm btn-error">Details</button></p>
             </div>
         </div>
         `;
