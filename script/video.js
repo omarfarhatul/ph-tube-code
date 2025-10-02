@@ -167,7 +167,6 @@ const displayCategories = (categories) =>{
 
         // button.classList="btn";
         // button.innerText=item.categories;
-        
         // add button to category container
         categoriesContainer.append(buttonContainer);
     });
