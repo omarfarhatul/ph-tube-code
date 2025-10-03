@@ -157,7 +157,6 @@ const displayCategories = (categories) =>{
     categories.forEach((item) => {
         console.log(item);
         // create a button
-
         const buttonContainer=document.createElement("div");
         buttonContainer.innerHTML=`
         <button id="btn-${item.category_id}" onclick="loadCategoryVideos(${item.category_id})" class="btn category-btn">
