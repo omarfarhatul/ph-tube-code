@@ -1,5 +1,4 @@
 // const isVerified="";
-
 // // if(isVerified===true){
 // //     console.log("User is verified.");
 // // }
