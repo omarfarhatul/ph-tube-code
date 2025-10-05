@@ -163,7 +163,6 @@ const displayCategories = (categories) =>{
         ${item.category}
         </button>
         `
-
         // button.classList="btn";
         // button.innerText=item.categories;
         // add button to category container
