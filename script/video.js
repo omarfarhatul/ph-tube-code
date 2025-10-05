@@ -75,6 +75,7 @@ const displayDetails = (video) => {
     document.getElementById("customModal").showModal();
 };
 
+
 // const cardDemo={
 //     "category_id": "1001",
 //     "video_id": "aaab",
