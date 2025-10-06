@@ -16,5 +16,4 @@ function getTimeString(time){
     remainingSecond=remainingSecond%60;
     return `${hour} hour ${minute} minute ${remainingSecond} second ago`;
 }
-
 console.log(getTimeString(7865));
