@@ -1,5 +1,5 @@
 function getTimeString(time){
-    // get Hour and rest seconds
+    // get Hour, minute and rest seconds
     const hour=parseInt(time/3600);
     let remainingSecond=time%3600;
     const minute=parseInt(remainingSecond/60);
@@ -65,7 +65,7 @@ const displayDetails = (video) => {
     const detailContainer=document.getElementById("modal-content");
 
     detailContainer.innerHTML= `
-        <p>It's a our video descriptions....</p>
+        <p class="font-bold">It's a video description....</p>
     `;
 
     // way-1
